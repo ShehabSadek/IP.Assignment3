@@ -10,7 +10,6 @@ def imgMasking():
             hsv = cv.cvtColor(img,cv.COLOR_BGR2HSV)
 
             mask=cv.inRange(hsv,low,high)
-
             imask = mask>0
             orange = np.zeros_like(img, np.uint8)
             orange[imask] = img[imask]
@@ -27,9 +26,11 @@ def imgMasking():
             
                 resized = cv.resize(vertical_concat, dim, interpolation = cv.INTER_AREA)
                 cv.imshow("Vertical plot resized Rainbow", resized)
-                cv.waitKey(0)
+                cv.waitKey()
                 cv.destroyAllWindows()
+                cv.waitKey(1)
             else:
                 cv.imshow("Vertical plot coloring pencils", vertical_concat)
-                cv.waitKey(0)
+                cv.waitKey()
                 cv.destroyAllWindows()
+                cv.waitKey(1)
