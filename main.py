@@ -2,7 +2,6 @@ from ImageMasking import *
 from VideoMasking import *
 from termcolor import colored
 
-
 while(True):
     print(colored('Orange Detection Mode','white',attrs=["reverse"]))
     print("1){}".format(colored('Image Masking', 'blue')),"\n2){}".format(colored('Video Masking', 'yellow')),"\n3){}".format(colored('Exit', 'red')))
